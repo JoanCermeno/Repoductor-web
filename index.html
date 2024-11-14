@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Reproductor web</title>
+  </head>
+  <body>
+    <div class="container-header">
+      <h3>Welcome to my</h3>
+      <h1 class="header-text">Music Player 🎶</h1>
+      <h6>create by Joan Cermeño</h6>
+    </div>
+
+    <div class="music-container">
+      <div class="music-info">
+        <h4 class="title"></h4>
+        <!-- controles de tiempo -->
+        <div class="container-progres">
+          <div class="progres"></div>
+          <div class="container-timer">
+            <span id="currenTime">00:00</span>
+            <span id="timeEndSond">00:00</span>
+          </div>
+        </div>
+      </div>
+
+      <audio src="music/Goddess_Nightcore.mp3" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="img/Goddess_Nightcore.jpg" alt="music-cover" id="cover" />
+      </div>
+
+      <div class="navigation">
+        <button class="action-btn" id="prev">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button class="action-btn action-btn-big" id="play">
+          <i class="fas fa-play"></i>
+        </button>
+        <button class="action-btn" id="next">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <section class="listMusic">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

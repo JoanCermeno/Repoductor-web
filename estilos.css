@@ -1,0 +1,169 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+
+  height: 100vh;
+  margin: 0;
+
+  background: linear-gradient(
+    0deg,
+    rgb(247, 247, 247) 23.8%,
+    rgb(252, 212, 211) 97%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+.header-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.title {
+  font-size: small;
+}
+
+.music-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  display: flex;
+  padding: 20px 30px;
+  position: relative;
+  margin: 100px 0;
+  z-index: 10;
+}
+
+.img-container {
+  position: relative;
+  width: 110px;
+}
+
+.img-container img {
+  width: inherit;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgb(248, 190, 190);
+  transition: all 0.3s linear;
+}
+img:hover {
+  border-radius: 1%;
+  transform: scale(2);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.action-btn {
+  background: #fff;
+  border: none;
+  color: #bbbbbb;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0 10px;
+  outline: none;
+  transition: transform 1s ease;
+}
+.action-btn-big {
+  color: #888;
+}
+.action-btn:active {
+  transform: scale(0.8);
+}
+
+.music-info {
+  background: #fff8;
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  opacity: 0;
+  transform: translateY(0%);
+  padding: 10px 10px 10px 150px;
+  transition: transform 0.3s, ease-in opacity 0.3s ease-in;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0px;
+}
+
+.container-progres {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+  transition: height 0.1s linear;
+}
+
+.progres {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.container-progres:hover {
+  height: 8px;
+}
+.container-progres:hover .progres {
+  background-color: #fd5e86;
+}
+
+.container-timer {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: x-small;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 5px;
+}
+
+.container-header > h3 {
+  font-weight: 300;
+  margin: 0px;
+}
+.container-header > h6 {
+  font-weight: 100;
+  margin: 0px;
+}
+.container-header > h1 {
+  margin: 0px;
+  font-size: xx-large;
+  font-style: bold;
+}
+
+.listMusic {
+  display: none;
+}
