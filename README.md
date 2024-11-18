@@ -5,6 +5,6 @@ Sirve de ejemplo para entender conceptos muy básicos.
 
 # ¿Cómo usarlo?
 
-    Clona este repositorio: git clone https://tu-repositorio.git
+    Clona este repositorio: git clone https://github.com/JoanCermeno/repoductor-web-rose
     Abre el archivo index.html en tu navegador favorito.
     ¡Disfruta de la música!🩷🩷
