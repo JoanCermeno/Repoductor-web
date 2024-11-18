@@ -59,8 +59,9 @@ body {
   box-shadow: 1px 1px 5px rgb(248, 190, 190);
   transition: all 0.3s linear;
 }
-img:hover {
-  border-radius: 1%;
+
+.menuOpenend {
+  border-radius: 1% !important;
   transform: scale(2);
 }
 
@@ -165,5 +166,46 @@ img:hover {
 }
 
 .listMusic {
-  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000067;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-column-gap: 4rem;
+  transition: opacity 0.3s ease-in-out; /* Ajusta el tiempo y la función de easing según tus preferencias */
+}
+.listMusic ul {
+  grid-column: 2 / 2;
+  grid-row: 2 /2;
+  justify-content: center;
+  justify-items: end;
+  z-index: 30;
+  list-style: none;
+  background-color: rgb(252, 242, 242);
+  max-width: fit-content;
+  border-radius: 5px;
+  transition: opacity 1s ease-in-out; /* Ajusta el tiempo y la función de easing según tus preferencias */
+}
+.listMusic ul li {
+  padding: 1rem 0px;
+  color: rgb(39, 39, 39);
+  cursor: pointer;
+  font-size: small;
+  border-radius: 5px;
+
+  padding: 15px;
+}
+.listMusic ul li:hover {
+  background-color: #fff;
+}
+
+#musicsPlayList {
+  padding: 0;
+  margin: 0px;
+}
+.hidden {
+  opacity: 0;
+  z-index: -1;
 }

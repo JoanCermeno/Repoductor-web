@@ -7,6 +7,8 @@ const progres = document.querySelector(".progres");
 const containerProgres = document.querySelector(".container-progres");
 const title = document.querySelector(".title");
 const cover = document.querySelector("#cover");
+const musicsPlayList = document.querySelector("#musicsPlayList");
+const containerMusicPlayList = document.querySelector(".listMusic");
 
 // song titles, osea titulos de sonidos
 
@@ -105,6 +107,34 @@ function segundosAMinutosSegundos(segundos) {
 
   return `${minutosFormateados}:${segundosFormateados}`;
 }
+
+//show Music Playlist on menu
+function showMusicPlaylist(listMusics) {
+  return listMusics.reduce((listaHTML, nombreCancion) => {
+    return listaHTML + `<li>${nombreCancion}</li>`;
+  }, "");
+}
+function openMenuPlayList(e) {
+  console.log("abriendoMenu");
+  cover.classList.toggle("menuOpenend");
+  containerMusicPlayList.classList.toggle("hidden");
+}
+
+//funcion para selecionar el sonido desde la palylist
+function selectMusicFromPlaylist(eventClick) {
+  const nameMusic = eventClick.originalTarget.innerText;
+  console.log(nameMusic);
+  //genial con esto ya tengo el nombre de la musica, Mandamos a reproducir dicha musica
+  loadSong(nameMusic);
+  playSong();
+}
+
+musicsPlayList.innerHTML = showMusicPlaylist(songs);
+
+//evento para mostar el menu de las canciones
+cover.addEventListener("mouseover", openMenuPlayList);
+// evento para cambiar musica desde la playlist
+musicsPlayList.addEventListener("click", selectMusicFromPlaylist);
 
 //cambiar de cansion Cahnge song event
 prevBtn.addEventListener("click", prevSong);
